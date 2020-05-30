@@ -7,6 +7,7 @@ def call(Map config=[:]) {
         stage('Build') {
             try {
                 echo 'Building ...'
+                echo "Build for " + config.project
                 releasenotes()
             } catch (ex) {
                 echo 'Something went wrong'
